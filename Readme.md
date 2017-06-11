@@ -1,5 +1,5 @@
 
-#PatternPlus
+# PatternPlus
 This libary is meant to help simplify Java 1.8 Regular Expression Matching utilizing the
 [Named Sequence Matching] (https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#groupname)
 and inject the named groups into a provided object, either via Field, or Method, based on the named group.
@@ -8,7 +8,7 @@ see
   [java.util.regex.Pattern]([https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)  
   [java.util.regex.Matcher](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Matcher.html)  
 
-##Why
+## Why
 Found was doing lots of regular expression parsing like below...and got tired of it, didn't find anything I liked
 so wrote this...
     
@@ -30,7 +30,7 @@ so wrote this...
 
 
 
-##Examples
+## Examples
 
   Examples below show the different Matcher.InjectOption do in the Matcher.inject(Object o, InjectOption) method does.  The
   Matcher.inject(Object o, InjectOption) will return a Set<String> of all groups it did not find or failed to inject into the object on.
@@ -47,7 +47,7 @@ so wrote this...
 
 Below are simple examples...See Unit test for more complex examples.
 
-###Match.InjectOption.PUBLIC_FIELD
+### Match.InjectOption.PUBLIC_FIELD
   inject() will just look for a field of String.class with the matching Name
 
 
@@ -64,7 +64,7 @@ Below are simple examples...See Unit test for more complex examples.
      
 
 
-###Matcher.InjectOption.POJO
+### Matcher.InjectOption.POJO
   On this feature the inject() will prefix the group name with ''set'' and capitize the firtst character and look 
   for that method name...
 
@@ -84,7 +84,7 @@ Below are simple examples...See Unit test for more complex examples.
     assertTrue(o.getP2() == "value2");
  
 
-###Matcher.InjectOption.METHOD
+### Matcher.InjectOption.METHOD
   This option the inject() treats every group as a method name expecting the method signature to be a single String.class,
 pays not attention to the method returning object if there is one...
 
