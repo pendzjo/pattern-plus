@@ -37,13 +37,13 @@ so wrote this...
    
   i.e.
 
-  Set<String> remainingGroups = m.inject(o, Matcher.InjectOption.PUBLIC_FIELD);  
-  if(remainingGroups.size() == 0) {   
-    System.out.println("All Groups found in regex, have been used and injected into Object o");  
-  else if(remainingGroups.size() > 0) {  
-   System.out.println("Some groups found in regex, were not found by the injector...");  
-   //Program can still deal with this other group manually.  
-  }  
+    Set<String> remainingGroups = m.inject(o, Matcher.InjectOption.PUBLIC_FIELD);  
+    if(remainingGroups.size() == 0) {   
+      System.out.println("All Groups found in regex, have been used and injected into Object o");  
+    else if(remainingGroups.size() > 0) {  
+      System.out.println("Some groups found in regex, were not found by the injector...");  
+      //Program can still deal with this other group manually.  
+    }  
 
 Below are simple examples...See Unit test for more complex examples.
 
