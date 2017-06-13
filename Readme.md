@@ -1,16 +1,15 @@
 
 # PatternPlus
 This libary is meant to help simplify Java 1.8 Regular Expression Matching utilizing the
-[Named Sequence Matching] (https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#groupname)
-and inject the named groups into a provided object, either via Field, or Method, based on the named group.
+[Named Sequence Matching](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#groupname)
+and inject the named groups into a provided object, either via Field, Method (raw name or pojo), all based on the named group in the regex.
 
 see  
-  [java.util.regex.Pattern]([https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)  
+  [java.util.regex.Pattern](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)  
   [java.util.regex.Matcher](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Matcher.html)  
 
 ## Why
-Found was doing lots of regular expression parsing like below...and got tired of it, didn't find anything I liked
-so wrote this...
+Was coding lots of regular expression parsing like below...
     
     public class Obj {
         private String p1;
@@ -27,7 +26,8 @@ so wrote this...
       o.p2 = m.group("p2");
     }
     .....
-
+    
+and got tired of it, didn't find anything I liked so wrote this pattern-plus
 
 
 ## Examples
