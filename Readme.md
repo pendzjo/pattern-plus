@@ -29,6 +29,16 @@ Was coding lots of regular expression parsing like below...
     
 and got tired of it, didn't find anything I liked so wrote this pattern-plus
 
+## MAVEN
+  To pull this from Maven Central repo add dependency to pom file
+```xml
+    <dependency>  
+      <groupId>com.consultwithcase.patternplus</groupId>  
+      <artifactId>patternplus</artifactId>  
+      <version>1.0</version>  
+    </dependency>  
+```
+
 
 ## Examples
 
