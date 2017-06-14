@@ -12,7 +12,6 @@ import java.util.regex.MatchResult;
 
 /**
  *
- * @author johnnp
  */
 public class Matcher implements MatchResult {
     java.util.regex.Matcher m;
@@ -130,7 +129,7 @@ public class Matcher implements MatchResult {
      * the object o provide via InjectOption provided.
      * @param o -- object to perform the injection on
      * @param option -- option to utilize
-     * @return -- returns Set<String> of the group that wasn't injected into the Object o
+     * @return -- returns Set&lt;String&gt; of the group that wasn't injected into the Object o
      */
     public Set<String> inject(Object o, InjectOption option) {
         Set<String> groups = getGroupsStrings();
