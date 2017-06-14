@@ -4,7 +4,7 @@
     <groupId>com.consultwithcase.patternplus</groupId>
     <artifactId>patternplus</artifactId>
     <packaging>jar</packaging>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     <name>patternplus</name>
     <url>http://consultwithcase.com</url>
     <description> Project to handle Java Regex Expression and Injecting based on named groups</description>
@@ -54,7 +54,7 @@
                 <version>3.6.1</version>
             </plugin>
        
-            <!-- For Central repo deployment stuff... -->
+            <!-- For Central repo deployment stuff...
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
@@ -119,12 +119,12 @@
         </execution>
       </executions>
     </plugin>
-            
+            -->
             
             
         </plugins>
     </build>
-
+<!--
   <distributionManagement>
       <snapshotRepository>
           <id>ossrh</id>
@@ -135,7 +135,7 @@
           <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
      </repository> 
   </distributionManagement>
-
+-->
 
 
 </project>
