@@ -11,7 +11,7 @@ see
 ## Why
 Was coding lots of regular expression parsing like below...
 
-``` java   
+```java   
     public class Obj {
         private String p1;
         public String p2;
@@ -19,7 +19,7 @@ Was coding lots of regular expression parsing like below...
         public void setP1(String str) { this.p1 = str; };
     }
 
-    Pattern p = Pattern.compile("(?<p1>.*):(?<p2>.*));
+    Pattern p = Pattern.compile("(?<p1>.*):(?<p2>.*)");
     Matcher m = p.matcher("value1:value2");
     Obj o = new Obj();
     if(m.matches()) {
@@ -52,7 +52,7 @@ and got tired of it, didn't find anything I liked so wrote this pattern-plus
     Set<String> remainingGroups = m.inject(o, Matcher.InjectOption.PUBLIC_FIELD);  
     if(remainingGroups.size() == 0) {   
       System.out.println("All Groups found in regex, have been used and injected into Object o");  
-    else if(remainingGroups.size() > 0) {  
+    } else if(remainingGroups.size() > 0) {  
       System.out.println("Some groups found in regex, were not found by the injector...");  
       //Program can still deal with this other group manually.  
     }  
@@ -67,7 +67,7 @@ Below are simple examples...See Unit test for more complex examples.
        public String p1, p2;
     }
 
-    Pattern p = Pattern.compile("(?<p1>.*):(?<p2>.*));
+    Pattern p = Pattern.compile("(?<p1>.*):(?<p2>.*)");
     Matcher m = p.matcher("value1:value2");
     Obj o = new Obj();
     m.inject(o, Matcher.InjectOption.PUBLIC_FIELD);
@@ -89,7 +89,7 @@ Below are simple examples...See Unit test for more complex examples.
        public String getP2() { return this.p2; }
     }
 
-    Pattern p = Pattern.compile("(?<p1>.*):(?<p2>.*));
+    Pattern p = Pattern.compile("(?<p1>.*):(?<p2>.*)");
     Matcher m = p.matcher("value1:value2");
     Obj o = new Obj();
     m.inject(o, Matcher.InjectOption.POJO);
@@ -110,7 +110,7 @@ pays not attention to the method returning object if there is one...
        public String getP2() { return this.p2; }
     }
 
-    Pattern p = Pattern.compile("(?<method1>.*):(?<method2>.*));
+    Pattern p = Pattern.compile("(?<method1>.*):(?<method2>.*)");
     Matcher m = p.matcher("value1:value2");
     Obj o = new Obj();
     m.inject(o, Matcher.InjectOption.METHOD);
