@@ -2,3 +2,5 @@ build.xml
 **/nbproject/*
 **/target/*
 *~
+/build/
+/dist/

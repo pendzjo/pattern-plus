@@ -5,9 +5,9 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import java.util.TreeSet;
 import java.util.regex.MatchResult;
 
 /**
@@ -245,7 +245,7 @@ public class Matcher implements MatchResult {
         String pattern = m.pattern().pattern();
         Pattern p = Pattern.compile(GROUP_NAME_PATTERN_REGEX);
         Matcher mm = p.matcher(pattern);
-        Set<String> groups = new TreeSet<>(); 
+        Set<String> groups = new HashSet<>(); 
         while(mm.find()) {
             groups.add(mm.group(1));
         }
